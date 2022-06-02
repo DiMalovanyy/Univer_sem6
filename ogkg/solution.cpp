@@ -35,7 +35,7 @@ IMPLEMENT_APP(MyApp)
 
 bool MyApp::OnInit() {
     wxBoxSizer* sizer = new wxBoxSizer(wxHORIZONTAL);
-    frame = new wxFrame((wxFrame *)NULL, -1,  wxT("Hello wxDC"), wxPoint(50,50), wxSize(800,600));
+    frame = new wxFrame((wxFrame *)NULL, -1,  wxT("OGTG Lab Dmytro Malovanyi"), wxPoint(50,50), wxSize(800,600));
 	
     drawPane = new BasicDrawPane( (wxFrame*) frame );
     sizer->Add(drawPane, 1, wxEXPAND);
