@@ -5,7 +5,7 @@ test: test.c
 	mpicc -o $@ $^
 
 lab_1: lab_1.c
-	gcc -o $@ $^
+	gcc -o $@ $^ -O0
 
 lab_2: lab_2.c
 	mpicc -o $@ $^
