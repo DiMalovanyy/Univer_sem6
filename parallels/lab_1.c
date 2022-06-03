@@ -6,12 +6,15 @@
 
 int* convert(char* c, int array_size) {
 
-	int* array = malloc(sizeof(int)*array_size);
+	int* array = (int*)malloc(sizeof(int)*array_size);
 	int num, i = 0, len;
+	int index = 0;
     while ( sscanf( c, "%d%n", &num, &len) == 1 ) {
+//		printf("Num: %d, Len: %i\n", num, len);
         c += len;
-        array[i++] = num;
+        array[index++] = num;
     }
+//	printf ("I: %i\n", index);
 	return array;
 }
 
