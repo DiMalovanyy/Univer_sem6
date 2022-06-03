@@ -34,7 +34,7 @@ declare -a results
 for executable in "${executables[@]}"
 do
 	if [ "${executable}" == "lab_1" ]; then
-		printf "%s\t\t1\t\t" "${executable}"
+		printf "%s\t1\t\t" "NonParallel"
 		for data_size_index in "${!input_data_sizes[@]}"; do
 
 			random_array=()
@@ -57,7 +57,7 @@ do
 		printf "\n"
 	elif [ "${executable}" == "lab_2" ]; then
 		for num_thread in "${num_threads[@]}"; do
-			printf "%s\t\t%i\t\t" "${executable}" "${num_thread}"
+			printf "%s\t\t%i\t\t" "MPI" "${num_thread}"
 			for data_size_index in "${!input_data_sizes[@]}"; do
 				random_array=()
 				random_array=${random_arrays[$data_size_index]}
@@ -80,7 +80,7 @@ do
 		done
 	elif [ "${executable}" == "lab_3" ]; then
 		for num_thread in "${num_threads[@]}"; do
-			printf "%s\t\t%i\t\t" "${executable}" "${num_thread}"
+			printf "%s\t\t%i\t\t" "OpenMP" "${num_thread}"
 			for data_size_index in "${!input_data_sizes[@]}"; do
 				random_array=()
 				random_array=${random_arrays[$data_size_index]}
